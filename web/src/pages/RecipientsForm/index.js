@@ -74,7 +74,11 @@ export default function RecipientsForm({
     <Container>
       <Form onSubmit={handleSubmit} schema={schema} initialData={initialData}>
         <section>
-          <Title>Cadastro de destinatários</Title>
+          <Title>
+            {recipientId
+              ? 'Edição De Destinatário'
+              : 'Cadastro de Destinatários'}
+          </Title>
 
           <aside>
             <Button

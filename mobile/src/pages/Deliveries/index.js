@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import StepIndicator from 'react-native-step-indicator';
 import { format, parseISO } from 'date-fns';
+import { withNavigationFocus } from 'react-navigation';
 
 import api from '~/services/api';
 import { signOut } from '~/store/modules/auth/actions';
@@ -54,8 +55,7 @@ const stepConfiguration = {
   labelSize: 13,
   currentStepLabelColor: '#999999',
 };
-
-export default function Deliveries({ navigation }) {
+function Deliveries({ navigation, isFocused }) {
   const dispatch = useDispatch();
   const userProfile = useSelector(state => state.user.profile);
   const [deliveredFilter, setDeliveredFilter] = useState(false);
@@ -111,8 +111,10 @@ export default function Deliveries({ navigation }) {
       }
     }
 
-    loadDeliveries();
-  }, [deliveredFilter, userProfile.id]);
+    if (isFocused) {
+      loadDeliveries();
+    }
+  }, [deliveredFilter, userProfile.id, isFocused]);
 
   function handleLogout() {
     dispatch(signOut());
@@ -217,3 +219,4 @@ export default function Deliveries({ navigation }) {
 Deliveries.navigationOptions = {
   header: null,
 };
+export default withNavigationFocus(Deliveries);

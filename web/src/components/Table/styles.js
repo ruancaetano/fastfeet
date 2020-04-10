@@ -7,10 +7,17 @@ export const Container = styled.div`
     width: 100%;
 
     th {
-      text-align: center;
+      text-align: left;
       color: #444;
       font-weight: bold;
       font-size: 16px;
+      &:last-child {
+        text-align: center;
+      }
+    }
+
+    th#Status {
+      text-align: center;
     }
 
     tbody {
@@ -22,8 +29,12 @@ export const Container = styled.div`
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
         td {
-          text-align: center;
+          text-align: left;
           color: #666666;
+
+          &:last-child {
+            text-align: center;
+          }
         }
       }
     }

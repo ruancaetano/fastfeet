@@ -16,19 +16,19 @@ services:
     container_name: fastfeet_redis
     ports:
       - '6379:6379'
-      server:
-        build: .
-        container_name: fastfeet_server
-        entrypoint: sh /usr/app/scripts/init.sh
-        ports:
-          - '3333:3333'
-        volumes:
-          - ./:/usr/app/
-        env_file:
-          - .env
-        depends_on:
-          - postgres
-          - redis
+  server:
+    build: .
+    container_name: fastfeet_server
+    entrypoint: sh /usr/app/scripts/init.sh
+    ports:
+      - '3333:3333'
+    volumes:
+      - ./:/usr/app/
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
   # Queue process
   queue:
     build: ./

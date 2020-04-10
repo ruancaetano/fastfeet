@@ -83,6 +83,8 @@ _ps: Antes de executar, lembre-se de iniciar o backend deste projeto_
 
 - Rode `yarn` para instalar as dependências;
 
+- Caso deseje executar o app em um ambiente IOS, execute o seguinte comando `cd ios && pod install && cd ..`
+
 - Edite o arquivo `mobile/src/services/api.js`, alterando `baseURL` para o IP correspondente a máquina que estiver executando o `backend`;
 
 - Abra o emulador/simulador do sistema operacional que deseja acessar;

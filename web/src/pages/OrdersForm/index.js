@@ -104,7 +104,9 @@ export default function OrdersForm({
     <Container>
       <Form onSubmit={handleSubmit} schema={schema} initialData={initialData}>
         <section>
-          <Title>Cadastro de encomendas</Title>
+          <Title>
+            {orderId ? 'Edição De Encomenda' : 'Cadastro De Encomendas'}
+          </Title>
 
           <aside>
             <Button

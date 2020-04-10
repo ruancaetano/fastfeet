@@ -11,6 +11,8 @@ export const Container = styled.p`
   background: ${({ color }) => color};
   color: ${({ color }) => darken(0.5, color)};
 
+  text-align: center;
+
   &::before {
     display: inline-block;
     content: '';

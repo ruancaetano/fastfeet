@@ -51,7 +51,9 @@ export default function Table({
         <thead>
           <tr>
             {headers.map(item => (
-              <th key={item}>{item}</th>
+              <th key={item} id={item}>
+                {item}
+              </th>
             ))}
           </tr>
         </thead>
