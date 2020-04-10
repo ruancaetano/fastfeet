@@ -1,0 +1,15 @@
+
+# node
+node_modules
+
+# build
+dist
+
+# enverioment files
+.env
+
+# upload
+tmp
+
+
+data/
