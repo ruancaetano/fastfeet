@@ -32,7 +32,7 @@ export default function SignIn() {
       />
 
       <Button
-        enabled={userId && !loading}
+        enabled={Boolean(userId && !loading)}
         onPress={handleSubmit}
         loading={loading}
       >

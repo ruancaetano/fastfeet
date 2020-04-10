@@ -1,22 +1,17 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.SafeAreaView`
+export const Container = styled.ScrollView`
   background: #fff;
 `;
 
 export const Background = styled.View`
   background: #7d40e7;
-  height: 180px;
+  height: 160px;
 `;
 
-export const Content = styled.ScrollView.attrs({
-  showsVerticalScrollIndicator: false,
-  contentContainerStyle: {
-    padding: 30,
-  },
-})`
-  position: absolute;
-  width: 100%;
+export const Content = styled.ScrollView`
+  margin-top: -120px;
+  padding: 0 20px;
 `;
 
 export const Card = styled.View`
@@ -25,6 +20,7 @@ export const Card = styled.View`
   border-radius: 5px;
   width: 100%;
   margin-bottom: 15px;
+  border: 1px solid #dfdfdf;
 `;
 
 export const CardTitleWrapper = styled.View`
@@ -62,6 +58,7 @@ export const Buttons = styled.View`
   flex-direction: row;
   background: #e5e5e5;
   border-radius: 5px;
+  margin: 10px 0;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -71,6 +68,7 @@ export const Button = styled.TouchableOpacity`
   background: #fff;
   margin: 2px 1px;
   height: 80px;
+  padding: 5px;
 `;
 
 export const ButtonText = styled.Text`
