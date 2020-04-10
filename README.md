@@ -2,6 +2,14 @@
   <img alt="FastFeet" height="215" title="FastFeet" src=".github/logo.svg" />
 </h1>
 
+<p align="center">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-191A1E">
+
+  <a href="https://github.com/ruancaetano/">
+    <img alt="Made by Ruan Caetano" src="https://img.shields.io/badge/Made%20by-Ruan%20Caetano-191A1E">
+  </a>
+</p>
+
 <p align="justify">Aplicação para gerenciamento de encomendas contendo uma api rest, um portal web com funções destinadas a empresa de transporte e uma aplicação mobile com funcionalidades direcionadas ao entregador. O projeto foi esenvolvido como proposta de avalição final do GoStack Bootcamp da Rocketseat.</p>
 
 ## :rocket: Tecnologias
